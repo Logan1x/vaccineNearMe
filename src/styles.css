@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&display=swap');
+
+
 .App {
-  font-family: sans-serif;
+  font-family: 'Quicksand', sans-serif;
   text-align: center;
   padding: 1rem;
 }
@@ -19,6 +22,7 @@ select {
 form {
   /* padding: 1rem; */
   text-align: left;
+  margin: auto;
 }
 
 button {
@@ -33,13 +37,13 @@ button {
 li {
   list-style: none;
   border: 1px solid #ccc;
-  border-radius: .4rem;
+  border-radius: 0.4rem;
   padding: 1rem;
   background: azure;
   margin: 0.5rem;
 }
 
-li:hover{
+li:hover {
   box-shadow: 1px 1px 3px #c9c3d4;
 }
 
@@ -58,8 +62,31 @@ li:hover{
   margin-top: 1rem;
 }
 
+footer {
+  /* position: -webkit-sticky; */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin: auto;
+  margin-bottom: .3rem;
+}
+
+footer a {
+  color: #1d4ed8;
+  text-decoration-color: black;
+}
+
+footer a:hover{
+  text-decoration: none;
+}
+
 @media only screen and (max-width: 600px) {
-  .flexy{
+  .flexy {
     display: block;
+  }
+
+  footer {
+    position: relative;
   }
 }
