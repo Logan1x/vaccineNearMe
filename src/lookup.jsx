@@ -49,9 +49,9 @@ const lookup = () => {
         date;
       let res = await fetchUser(api);
       if (res.success) {
-        setPincode('');
-        setAge('');
-        
+        setPincode("");
+        setAge("");
+
         console.log("success");
         setLoadData(false);
         // setCentres([])
@@ -68,6 +68,7 @@ const lookup = () => {
 
   return (
     <div>
+      <div className="mw">
       <form onSubmit={formSubmit}>
         <label htmlFor="">Pincode</label>
         <input
@@ -86,16 +87,26 @@ const lookup = () => {
         />
         <button type="submit">Submit</button>
       </form>
-      <h1>Searching for {date}</h1>
-      {age} : {pincode}
-      <h1>
-        {" "}
-        There are {numberofslots} slots availble for {date} Center names are as
-        follows :{" "}
-        {centres.map((item) => {
-          return <li>{item}</li>;
-        })}
-      </h1>
+      </div>
+      
+      {centres.length ? (
+        <div>
+          <h3>Searching for {date}</h3>
+          <h4>
+            {" "}
+            There are {numberofslots} slots availble for {date}, Center names are
+            as follows {" "}
+            <div className="flexy">
+            {centres.map((item) => {
+              return <li>{item}</li>;
+            })}
+            </div>
+            
+          </h4>
+        </div>
+      ) : (
+        ""
+      )}
     </div>
   );
 };
