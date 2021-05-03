@@ -4,10 +4,13 @@ import Lookup from "./lookup";
 export default function App() {
   return (
     <div className="App">
-      <h1>Is there vaccine spot avaible near me?</h1>
-      <Lookup />
+      <div className='content'>
+        <h1>Is there vaccine spot available near me?</h1>
+        <Lookup />
+      </div>
       <footer>
-        Developed by <a href="https://twitter.com/herkuch">Khushal</a> & <a href="https://twitter.com/Pandyaparthppp">Parth</a>
+        Developed by <a href="https://twitter.com/herkuch">Khushal</a> &{" "}
+        <a href="https://twitter.com/Pandyaparthppp">Parth</a>
       </footer>
     </div>
   );
