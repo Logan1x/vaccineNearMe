@@ -111,7 +111,7 @@ const lookup = () => {
           <h3>Searching for {date}</h3>
           <h4>
             {" "}
-            There are {numberofslots} slots availble for {date}, Center names
+            There are {numberofslots} center availble for {date}, Center names
             are as follows{" "}
             <div className="flexy">
               {centres.map((item) => {
