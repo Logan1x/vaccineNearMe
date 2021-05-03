@@ -10,6 +10,7 @@ const lookup = () => {
   const [loadData, setLoadData] = useState(false);
   const [numberofslots, setNumberOfSlots] = useState(0);
   const [centres, setCentres] = useState([]);
+  const [notAvailable, setNotAvailable] = useState(false);
 
   const fetchUser = async (api) => {
     let response = await fetch(api)
@@ -29,6 +30,9 @@ const lookup = () => {
             // setCentres((oldArray) => [...oldArray, validSlots[i].name]);
             setCentres((oldarray) => [...oldarray, validSlots[i].name]);
           }
+        }
+        else{
+          setNotAvailable(true)
         }
       })
       .catch(function (error) {
@@ -63,6 +67,7 @@ const lookup = () => {
   function formSubmit(e) {
     e.preventDefault();
     setCentres([]);
+    setNotAvailable(false);
     setLoadData(true);
   }
 
@@ -105,8 +110,10 @@ const lookup = () => {
           </h4>
         </div>
       ) : (
-        ""
+        ''
       )}
+
+      {notAvailable? <h2>No center availble for vaccination :(</h2> : ''}
     </div>
   );
 };
