@@ -5,7 +5,8 @@ export default function App() {
   return (
     <div className="App">
       <div className="content">
-           <h1>Locate your nearby vaccination centre</h1>
+        <h1>Locate your nearby vaccination centre</h1>
+        <p style={{ fontSize: "10px" }}>#GetVaccinatedASAP</p>
         <Lookup />
       </div>
       <footer>
