@@ -72,14 +72,14 @@ const lookup = () => {
   return (
     <div>
       <div className="mw">
-        <form onSubmit={formSubmit}>
+        <form onSubmit={formSubmit} autocomplete="off">
           <label htmlFor="">Pincode</label>
           <input
             name="pincode"
             type="number"
             value={pincode}
             onChange={(e) => setPincode(e.currentTarget.value)}
-            placeholder="eg:313002"
+            placeholder="Eg: 313002"
             required
           />
           <label htmlFor="">Age</label>
@@ -107,12 +107,12 @@ const lookup = () => {
       </div>
 
       {centres.length ? (
-        <div>
+        <div style={{ marginBottom: "20px" }}>
           <h3>Searching for {date}</h3>
           <h4>
             {" "}
-            There are {numberofslots} center availble for {date}, Center names
-            are as follows{" "}
+            {numberofslots} center(s) available for {date} <br /> <br />{" "}
+            Available centres are as follows :{" "}
             <div className="flexy">
               {centres.map((item) => {
                 return <li key={item}>{item}</li>;
