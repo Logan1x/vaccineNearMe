@@ -52,8 +52,8 @@ const lookup = () => {
         let res = await fetchUser(api);
 
         if (res.success) {
-          setPincode("");
-          setAge("");
+          // setPincode("");
+          // setAge("");
           setLoadData(false);
         }
       }
