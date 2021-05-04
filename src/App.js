@@ -5,7 +5,8 @@ export default function App() {
   return (
     <div className="App">
       <div className="content">
-        <h1>Is there vaccine spot available near me?</h1>
+//         <h1>Is there vaccine spot available near me?</h1>
+           <h1>Locate your nearby vaccination centre</h1>
         <Lookup />
       </div>
       <footer>
